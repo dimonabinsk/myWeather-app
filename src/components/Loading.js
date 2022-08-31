@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, StatusBar, ImageBackground } from "react-native";
-// import { LinearGradient } from "expo-linear-gradient";
+
 
 export default function Loading() {
     return (

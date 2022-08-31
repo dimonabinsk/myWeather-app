@@ -1,4 +1,5 @@
 import React from "react";
+import windDirection from "../utilities/windDirection";
 
 import {
 	StyleSheet,
@@ -34,68 +35,68 @@ export default function Weather ( {
 		}
 	}
 
-	function windDirection ( wind ) {
-		if ( wind > 0 && wind <= 22.5 ) {
-			return `ССВ`;
-		}
-		else
-			if ( wind > 22.5 && wind <= 45 ) {
-				return `СВ`;
-			}
-			else
-				if ( wind > 45 && wind <= 67.5 ) {
-					return `ВСВ`;
-				}
-				else
-					if ( wind > 67.5 && wind <= 90 ) {
-						return `В`;
-					}
-					else
-						if ( wind > 90 && wind <= 112.5 ) {
-							return `ВЮВ`;
-						}
-						else
-							if ( wind > 112.5 && wind <= 135 ) {
-								return `ЮВ`;
-							}
-							else
-								if ( wind > 135 && wind <= 157.5 ) {
-									return `ЮЮВ`;
-								}
-								else
-									if ( wind > 157.5 && wind <= 180 ) {
-										return `Ю`;
-									}
-									else
-										if ( wind > 180 && wind <= 202.5 ) {
-											return `ЮЮЗ`;
-										}
-										else
-											if ( wind > 202.5 && wind <= 225 ) {
-												return `ЮЗ`;
-											}
-											else
-												if ( wind > 225 && wind <= 247.5 ) {
-													return `ЗЮЗ`;
-												}
-												else
-													if ( wind > 247.5 && wind <= 270 ) {
-														return `З`;
-													}
-													else
-														if ( wind > 270 && wind <= 292.5 ) {
-															return `ЗСЗ`;
-														}
-														else
-															if ( wind > 292.5 && wind <= 315 ) {
-																return `СЗ`;
-															}
-															else
-																if ( wind > 315 && wind <= 337.5 ) {
-																	return `ССЗ`;
-																}
-																else return `С`;
-	}
+	// function windDirection ( wind ) {
+	// 	if ( wind > 0 && wind <= 22.5 ) {
+	// 		return `ССВ`;
+	// 	}
+	// 	else
+	// 		if ( wind > 22.5 && wind <= 45 ) {
+	// 			return `СВ`;
+	// 		}
+	// 		else
+	// 			if ( wind > 45 && wind <= 67.5 ) {
+	// 				return `ВСВ`;
+	// 			}
+	// 			else
+	// 				if ( wind > 67.5 && wind <= 90 ) {
+	// 					return `В`;
+	// 				}
+	// 				else
+	// 					if ( wind > 90 && wind <= 112.5 ) {
+	// 						return `ВЮВ`;
+	// 					}
+	// 					else
+	// 						if ( wind > 112.5 && wind <= 135 ) {
+	// 							return `ЮВ`;
+	// 						}
+	// 						else
+	// 							if ( wind > 135 && wind <= 157.5 ) {
+	// 								return `ЮЮВ`;
+	// 							}
+	// 							else
+	// 								if ( wind > 157.5 && wind <= 180 ) {
+	// 									return `Ю`;
+	// 								}
+	// 								else
+	// 									if ( wind > 180 && wind <= 202.5 ) {
+	// 										return `ЮЮЗ`;
+	// 									}
+	// 									else
+	// 										if ( wind > 202.5 && wind <= 225 ) {
+	// 											return `ЮЗ`;
+	// 										}
+	// 										else
+	// 											if ( wind > 225 && wind <= 247.5 ) {
+	// 												return `ЗЮЗ`;
+	// 											}
+	// 											else
+	// 												if ( wind > 247.5 && wind <= 270 ) {
+	// 													return `З`;
+	// 												}
+	// 												else
+	// 													if ( wind > 270 && wind <= 292.5 ) {
+	// 														return `ЗСЗ`;
+	// 													}
+	// 													else
+	// 														if ( wind > 292.5 && wind <= 315 ) {
+	// 															return `СЗ`;
+	// 														}
+	// 														else
+	// 															if ( wind > 315 && wind <= 337.5 ) {
+	// 																return `ССЗ`;
+	// 															}
+	// 															else return `С`;
+	// }
 
 	function color ( t ) {
 		if ( t > 0 ) {

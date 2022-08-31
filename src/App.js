@@ -5,7 +5,8 @@ import axios from "axios";
 import Loading from "./components/Loading";
 import Weather from "./components/Weather";
 
-const API_KEY = "929ceb766635866cd23c702bd1f79e15";
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export default class extends React.Component {
     state = {

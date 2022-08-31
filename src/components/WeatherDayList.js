@@ -12,13 +12,13 @@ function WeatherDayList({ weatherDirection }) {
     function day(d) {
         const dayWeekNum = new Date(d * 1000).getDay();
 
-        if (dayWeekNum == 0) return "Воскресенье";
-        if (dayWeekNum == 1) return "Понедельник";
-        if (dayWeekNum == 2) return "Вторник";
-        if (dayWeekNum == 3) return "Среда";
-        if (dayWeekNum == 4) return "Четверг";
-        if (dayWeekNum == 5) return "Пятница";
-        if (dayWeekNum == 6) return "Суббота";
+        if (dayWeekNum === 0) return "Воскресенье";
+        if (dayWeekNum === 1) return "Понедельник";
+        if (dayWeekNum === 2) return "Вторник";
+        if (dayWeekNum === 3) return "Среда";
+        if (dayWeekNum === 4) return "Четверг";
+        if (dayWeekNum === 5) return "Пятница";
+        if (dayWeekNum === 6) return "Суббота";
     }
 
     const tempArr = [];

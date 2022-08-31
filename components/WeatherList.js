@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import { Fontisto } from "@expo/vector-icons";
 
 
-const Weatherlist = ({ weatherDirection }) => {
+const WeatherList = ({ weatherDirection }) => {
     function hours(d) {
         return new Date(d * 1000).getHours();
     }
@@ -18,13 +18,13 @@ const Weatherlist = ({ weatherDirection }) => {
     function day(d) {
         const dayWeekNum = new Date(d * 1000).getDay();
 
-        if (dayWeekNum == 0) return "Воскресенье";
-        if (dayWeekNum == 1) return "Понедельник";
-        if (dayWeekNum == 2) return "Вторник";
-        if (dayWeekNum == 3) return "Среда";
-        if (dayWeekNum == 4) return "Четверг";
-        if (dayWeekNum == 5) return "Пятница";
-        if (dayWeekNum == 6) return "Суббота";
+        if (dayWeekNum === 0) return "Воскресенье";
+        if (dayWeekNum === 1) return "Понедельник";
+        if (dayWeekNum === 2) return "Вторник";
+        if (dayWeekNum === 3) return "Среда";
+        if (dayWeekNum === 4) return "Четверг";
+        if (dayWeekNum === 5) return "Пятница";
+        if (dayWeekNum === 6) return "Суббота";
     }
 
     function getZero(num) {
@@ -74,7 +74,7 @@ const Weatherlist = ({ weatherDirection }) => {
             <ScrollView style={styles.scrollView} horizontal={true}>
                 {weatherDirection.map((e, i) => {
                     // console.log(day(e.dt));
-                    if (i == 0) {
+                    if (i === 0) {
                         return (
                             <View style={styles.wheatherList} key={i}>
                                 <Text style={styles.day}>Сейчас</Text>
@@ -222,4 +222,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Weatherlist;
+export default WeatherList;
